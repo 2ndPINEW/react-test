@@ -9,7 +9,6 @@ export const Form = () => {
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
-    console.log(isValidEmail(newEmail), newEmail);
     setIsValid(isValidEmail(newEmail));
   };
 
