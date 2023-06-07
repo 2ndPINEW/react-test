@@ -20,6 +20,7 @@ export const Form = () => {
         id="email"
         value={email}
         onChange={handleEmailChange}
+        aria-label="email-input"
       />
       {!isValid && <p style={{ color: "red" }}>Invalid email address</p>}
     </div>
