@@ -1,5 +1,6 @@
-import { ChangeEvent, isValidElement } from "react";
+import { ChangeEvent } from "react";
 import { useState } from "react";
+import { isValidEmail } from "../utils/validation";
 
 export const Form = () => {
   const [email, setEmail] = useState("");
@@ -8,7 +9,8 @@ export const Form = () => {
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
     const newEmail = event.target.value;
     setEmail(newEmail);
-    setIsValid(isValidElement(newEmail));
+    console.log(isValidEmail(newEmail), newEmail);
+    setIsValid(isValidEmail(newEmail));
   };
 
   return (
